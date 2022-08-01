@@ -1,0 +1,29 @@
+<!---  Date: 07/April/2022 - Thursday -->
+<!---  Author: Virgilio Murillo Ochoa -->
+<!---  personal github: Virgilio-AI -->
+<!---  linkedin: https://www.linkedin.com/in/virgilio-murillo-ochoa-b29b59203 -->
+<!---  contact: virgiliomurilloochoa1@gmail.com -->
+<!---  web: virgiliomurillo.com --!>
+
+
+{% extends 'layouts/layout.html' %}
+
+{% load static %}
+
+{% block title %}
+{{ Header }}
+{% endblock %}
+
+
+{% block content %}
+<h1 class="text-center">{{ Header }}</h1>
+{% for article in ListOfArticles %}
+<a href="{% url 'article:detail' article.id %}" style="color:#00FFFF" >
+<h2>{{article.title}}</h2>
+</a>
+	<br>
+{% endfor %}
+{% endblock %}
+
+
+

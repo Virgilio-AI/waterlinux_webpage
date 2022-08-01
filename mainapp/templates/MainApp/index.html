@@ -1,0 +1,35 @@
+<!---  Date: 24/March/2022 - Thursday -->
+<!---  Author: Virgilio Murillo Ochoa -->
+<!---  personal github: Virgilio-AI -->
+<!---  linkedin: https://www.linkedin.com/in/virgilio-murillo-ochoa-b29b59203 -->
+<!---  contact: virgiliomurilloochoa1@gmail.com -->
+
+
+{% extends 'layouts/layout.html' %}
+
+{% load static %}
+{% block content %}
+
+
+<!-- Jumbotron -->
+<div class="jumbotron">
+		<img style="display: block; margin-left: auto; margin-right: auto; width: 40%; " src="{% static "MainApp/images/LogoSmall.png" %}" width="" class="" >
+		
+			<p class="text-info" style="font-size: 50px;text-align: center;">Water Linux</p>
+		<p>A minimalistic Linux distribution for competitive programmers and developers that use neovim</p>
+		<p>based on Arch Linux!</p>
+		<p>
+		<a class="btn btn-lg btn-primary" href="{% url 'main:downloads' %}" role="button">Downloads</a>
+		<a class="btn btn-primary" href="{% url 'article:Documentation' %} " id="stars">Documentation</a>
+		</p>
+</div>
+
+
+<div class="row tall-row">
+	<div class="col-md-12">
+		<p>Created by <a href="https://www.virgiliomurillo.com">Virgilio</a>. &copy; 2022</p>
+	</div>
+</div>
+
+
+{% endblock %}

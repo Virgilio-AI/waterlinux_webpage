@@ -1,0 +1,58 @@
+<!---  Date: 07/April/2022 - Thursday -->
+<!---  Author: Virgilio Murillo Ochoa -->
+<!---  personal github: Virgilio-AI -->
+<!---  linkedin: https://www.linkedin.com/in/virgilio-murillo-ochoa-b29b59203 -->
+<!---  contact: virgiliomurilloochoa1@gmail.com -->
+<!---  web: virgiliomurillo.com --!>
+
+
+{% extends 'layouts/layout.html' %}
+
+{% load static %}
+
+{% block title %}
+Wiki
+{% endblock %}
+
+
+{% block content %}
+
+<div class="jumbotron">
+
+	<h1 class="text-center">Wiki</h1>
+	<h3>{{article.title}}</h3>
+	<h5>{{article.created_at}}</h5>
+
+
+
+	{% for category in categories %} <a href="#" class="btn btn-default">{{category.object}}</a> {% endfor %}
+
+
+		
+	<h5>* created by {{article.user}}</h5>
+</div>
+
+
+
+<div class="jumbotron" style="background: #3366cc; opacity:0.85;">
+
+	<p>
+	{{article.content|safe}}
+	</p>
+
+
+</div>
+
+
+
+
+
+{% endblock %}
+
+<footer>
+
+
+</footer>
+
+
+

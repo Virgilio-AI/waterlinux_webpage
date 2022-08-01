@@ -1,0 +1,199 @@
+<!---  Date: 24/March/2022 - Thursday -->
+<!---  Author: Virgilio Murillo Ochoa -->
+<!---  personal github: Virgilio-AI -->
+<!---  linkedin: https://www.linkedin.com/in/virgilio-murillo-ochoa-b29b59203 -->
+<!---  contact: virgiliomurilloochoa1@gmail.com -->
+{% load static %}
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}
+			Water Linux
+			{% endblock %}
+		</title>
+		<link href="{% static "css/hacker.css" %}" rel="stylesheet">
+
+	</head>
+
+
+
+	<body background="{% static "MainApp/images/MainBackground.jpg" %}" class="d-flex flex-column min-vh-100">
+		<nav id="topNav" class="navbar navbar-expand-md navbar-light">
+			<div class="container">
+				<a class="navbar-brand" href="{% url 'main:index' %}">
+					<img src="{% static "MainApp/images/Logo.png" %}" width="50" class="" >
+					<span style="font-family:serif;">Water</span>
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse text-center" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<!--
+							<li class="nav-item">
+							<a class="nav-link" style="font-family:serif;" href="https://linkedin.com/in/virgilio-murillo-ochoa-b29b59203" target="_blank">About</a>
+							</li>
+						-->
+
+						<li class="nav-item">
+							<a class="nav-link" style="font-family:serif;" href="https://github.com/Virgilio-AI/dotFiles-AW" target="_blank">Github</a>
+						</li>
+						<li>
+							<a role="button" href="{% url 'article:AllArticles' %}" class="btn btn-primary" style="background:#FB1C1C;opacity:0.8;font-family:serif;">Wiki</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			{% block content %}
+			{% endblock %}
+		</div>
+
+
+
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+
+
+		<!-- Footer -->
+		<footer class="text-center text-lg-start bg-dark text-white mt-auto">
+			<!-- Section: Social media -->
+
+			<!-- Section: Links  -->
+			<section class="">
+				<div class="container text-center text-md-start mt-5">
+					<!-- Grid row -->
+					<div class="row mt-3">
+						<!-- Grid column -->
+						<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+							<!-- Content -->
+							<h6 class="text-uppercase fw-bold mb-4">
+								<i class="fas fa-gem me-3"></i>Arch Water Linux
+							</h6>
+							<p>
+							Arch Water Linux is a linux distribution for developers that use vim
+							</p>
+						</div>
+						<!-- Grid column -->
+
+						<!-- Grid column -->
+
+						<!-- Grid column -->
+						<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+							<!-- Links -->
+							<h6 class="text-uppercase fw-bold mb-4">
+								Useful links
+							</h6>
+							<p>
+							<a href="{% url 'main:index' %}" class="text-reset">Home</a>
+							</p>
+							<p>
+							<a href="{% url 'article:AllArticles' %}" class="text-reset">Wiki</a>
+							</p>
+							<p>
+							<a href="{% url 'article:Documentation' %}" class="text-reset">Documentation</a>
+							</p>
+							<p>
+							<a href="{% url 'main:downloads' %} " class="text-reset">Downloads</a>
+							</p>
+						</div>
+						<!-- Grid column -->
+
+						<!-- Grid column -->
+						<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+							<!-- Links -->
+							<h6 class="text-uppercase fw-bold mb-4">
+								Contact
+							</h6>
+							<p>Aguascalientes,Aguascalientes Mexico</p>
+
+							<p>
+							virgiliomurilloochoa1@gmail.com
+							</p>
+
+
+
+							<p>
+							<a href="https://github.com/Virgilio-AI" class="text-reset">Github</a>
+							</p>
+
+							<p>
+							<a href="https://www.linkedin.com/in/virgilio-murillo-ochoa-b29b59203" class="text-reset">linkedin</a>
+							</p>
+
+							<p>
+							<a href="virgiliomurillo.com" class="text-reset">virgiliomurillo.com</a>
+							</p>
+
+
+
+						</div>
+						<!-- Grid column -->
+					</div>
+					<!-- Grid row -->
+				</div>
+			</section>
+			<!-- Section: Links  -->
+
+			<!-- Copyright -->
+			<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+				© 2022 Copyright:
+				<a class="text-reset fw-bold" href="{% url 'main:index' %}">ArchWater.com</a>
+			</div>
+			<!-- Copyright -->
+		</footer>
+		<!-- Footer -->
+
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+
+</html>

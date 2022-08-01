@@ -1,0 +1,61 @@
+
+<!---  Date: 24/March/2022 - Thursday -->
+<!---  Author: Virgilio Murillo Ochoa -->
+<!---  personal github: Virgilio-AI -->
+<!---  linkedin: https://www.linkedin.com/in/virgilio-murillo-ochoa-b29b59203 -->
+<!---  contact: virgiliomurilloochoa1@gmail.com -->
+
+{% extends 'layouts/layout.html' %}
+
+{% load static %}
+
+{% block title %}
+Arch Water Linux Downloads
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<table class="table table-striped table-hover ">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Version</th>
+			<th>Release date</th>
+			<th>link/Torrent</th>
+		</tr>
+	</thead>
+
+	<tbody>
+
+		{% for download in downloads %}
+		<tr>
+			<td>{{forloop.counter}}</td>
+			<td>{{download.name}}</td>
+			<td>{{download.created_at}}</td>
+			<td>
+				{% if download.torrent != "NoLink" %}
+					<p id="p{{forloop.counter}}" style="display: none;">{{download.torrent}}</p>
+					<button type="button" class="btn btn-success" onclick="copyToClipboard('#p{{forloop.counter}}')">Copy</button>
+					{% else %}
+					<a href="{{download.file.url}}">download</a>
+				{% endif %}
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table> 
+
+<script>
+	function copyToClipboard(element) {
+			var $temp = $("<input>");
+			$("body").append($temp);
+			$temp.val($(element).text()).select();
+			document.execCommand("copy");
+			$temp.remove();
+		}
+</script>
+
+{% endblock %}
